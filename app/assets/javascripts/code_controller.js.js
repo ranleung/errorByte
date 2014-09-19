@@ -12,12 +12,11 @@ CodesCtrl = (function() {
     this.sce = sce;
     this.greeting = "hello world";
     this.Code = this.resource("/codes/:id.json");
-    this.snippets = [];
-    this.html = "<strong>this is html</strong>";
-    this.trustedHtml = this.sce.trustAsHtml(this.html);
     this.Code.query((function(_this) {
       return function(data) {
-        return _this.codes = data;
+        _this.codes = data;
+        console.log(_this.codes);
+        return _this.correctCode = _this.sce.trustAsHtml("if (time < 20) { <br />console.log('Good day');<br>}");
       };
     })(this));
   }

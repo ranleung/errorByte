@@ -13,6 +13,10 @@ Router = (function() {
       templateUrl: "/code_templates",
       controller: "CodesCtrl as codes"
     });
+    this.routeProvider.when("/users/new", {
+      templateUrl: "/user_templates",
+      controller: "UsersCtrl as users"
+    });
     this.locationProvider.html5Mode(true);
   }
 

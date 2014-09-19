@@ -1,7 +1,10 @@
 class SitesController < ApplicationController
 
 	def index
-		#render "layouts/application"
+	end
+
+	def new
+		
 	end
 	
 end

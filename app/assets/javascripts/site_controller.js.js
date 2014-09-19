@@ -4,10 +4,14 @@ var SiteControllers, SitesCtrl;
 SiteControllers = angular.module("SiteControllers", []);
 
 SitesCtrl = (function() {
-  function SitesCtrl() {}
+  function SitesCtrl(scope, http, resource) {
+    this.scope = scope;
+    this.http = http;
+    this.resource = resource;
+  }
 
   return SitesCtrl;
 
 })();
 
-SiteControllers.controller("SitesCtrl", ["$scope", "$http", SitesCtrl]);
+SiteControllers.controller("SitesCtrl", ["$scope", "$http", "$resource", SitesCtrl]);

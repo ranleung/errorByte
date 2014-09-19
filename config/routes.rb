@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 	resources :code_templates
 	resources :sites
 	resources :site_templates
+	resources :user_templates
 
 end

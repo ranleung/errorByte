@@ -6,13 +6,15 @@ CodeControllers = angular.module("CodeControllers", [
 class CodesCtrl
 
 	constructor: (@scope, @http, @resource, @Code, @sce)->
+		# Use to test if angular is running
 		@greeting = "hello world"
+		# Making a call to the db
 		@Code = @resource("/codes/:id.json")
-		@snippets = []
-		@html = "<strong>this is html</strong>"
-		@trustedHtml = @sce.trustAsHtml(@html)
 		@Code.query (data)=>
 			@codes = data
+			console.log(@codes)
+			# HTML escaping in angular
+			@correctCode = @sce.trustAsHtml("if (time < 20) { <br />console.log('Good day');<br>}")
 
 
 

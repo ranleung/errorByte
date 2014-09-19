@@ -1,16 +1,15 @@
 class UsersController < ApplicationController
 	before_action :set_user, only: [:show, :update,:destroy]
 
-	# before_action :render_main_layout_if_format_html
+	before_action :render_main_layout_if_format_html
 
-	# respond_to :json, :html
+	respond_to :json, :html
 
 	def index
-		redirect_to '/'
+		respond_with @user = User.all
 	end
 
-	def new
-		@user = User.new
+	def new 
 	end
 
 	def create
