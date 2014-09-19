@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+randall = User.create({username: "ranleung", password: "111"})
+
+js = randall.codes.create({level: "begin", question: "Unexpected end of input", correctCode: "if (time < 20) { console.log('Good day'); }", wrongCode: "if (time < 20) { console.log('Good day');", hint: "control flow"})
+
+
