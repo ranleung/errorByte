@@ -6,6 +6,10 @@ Router = (function() {
     this.routeProvider = routeProvider;
     this.locationProvider = locationProvider;
     this.routeProvider.when("/", {
+      templateUrl: "/site_templates",
+      controller: "SitesCtrl as sites"
+    });
+    this.routeProvider.when("/codes", {
       templateUrl: "/code_templates",
       controller: "CodesCtrl as codes"
     });

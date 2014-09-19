@@ -1,4 +1,5 @@
 angular.module("CodesApp", [
 	"CodeRouter",
-	"CodeControllers"
+	"CodeControllers",
+	"SiteControllers"
 ])

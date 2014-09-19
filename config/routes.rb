@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  
-	root to: "codes#index"
+	root to: "sites#index"
 	resources :users
 	resources :codes
 	resources :code_templates
+	resources :sites
+	resources :site_templates
 
 end

@@ -4,8 +4,15 @@ class Router
 
 		@routeProvider.
 			when "/",
+				templateUrl: "/site_templates",
+				controller: "SitesCtrl as sites"
+
+
+		@routeProvider.
+			when "/codes",
 				templateUrl: "/code_templates",
 				controller: "CodesCtrl as codes"
+
 
 		@locationProvider.html5Mode(true)
 
