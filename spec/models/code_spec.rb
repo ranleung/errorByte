@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Code, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+	subject { FactoryGirl.create(:code) }
+
+	it "should create level, question, correctCode, wrongCode, and hint" do
+		expect(subject).to be_valid
+	end
+
 end
