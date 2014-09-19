@@ -2,10 +2,10 @@ class CreateCodes < ActiveRecord::Migration
   def change
     create_table :codes do |t|
       t.string :level
-      t.string :question
-      t.string :correctCode
-      t.string :wrongCode
-      t.string :hint
+      t.text :question
+      t.text :correctCode
+      t.text :wrongCode
+      t.text :hint
 
       t.timestamps
     end

@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20140919012220) do
 
   create_table "codes", force: true do |t|
     t.string   "level"
-    t.string   "question"
-    t.string   "correctCode"
-    t.string   "wrongCode"
-    t.string   "hint"
+    t.text     "question"
+    t.text     "correctCode"
+    t.text     "wrongCode"
+    t.text     "hint"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

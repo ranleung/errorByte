@@ -1,10 +1,15 @@
 <a href="/">Home</a><br>
 Test to see if angular works: {{1+2}}<br>
+The controller is codes
 <h1 class="text-center">Where the code goes</h1>
 
 
+{{codes.greeting}}
+{{codes.text}}
+
+<i ng-bind-html="codes.trustedHtml"></i>
 
 
 
 
-
+<!-- <li ng-bind-html-unsafe="codes.codes[0].correctCode"></li> -->
