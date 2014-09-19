@@ -35,7 +35,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'pry-rails'
+gem 'angular-rails-templates'
 
 group :development do
 	gem 'spring'

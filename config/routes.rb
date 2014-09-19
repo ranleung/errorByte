@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-	root "users#index"
+	root to: "codes#index"
 	resources :users
+	resources :codes
+	resources :code_templates
 
 end
