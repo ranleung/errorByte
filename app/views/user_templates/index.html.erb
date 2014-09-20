@@ -2,7 +2,10 @@ Test to see if Angular is Working: {{1+2}}
 
 <h1>This is where I create a new User</h1>
 
-<form action="createUser(user)">
-	<input type="text" placeholder="user.username">
-	<input type="password" placeholder="user.password">
+<form ng-submit="users.addUser(newUser)">
+	<input type="text" placeholder="Username" ng-model="newUser.username" autofocus required>
+	<input type="password" placeholder="Password" ng-model="newUser.password" required>
+	<button>Create</button>
 </form>
+
+{{users.greeting}}

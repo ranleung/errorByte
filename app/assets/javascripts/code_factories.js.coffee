@@ -11,3 +11,18 @@ class Code
 
 
 CodeFactories.service("Code", ["$http", Code])
+
+
+class User
+
+	constructor: (@http)->
+
+	all: ()->
+		@http.get("/users.json")
+
+	create: (newUser)->
+		@http.post("/users.json", {username: newUser.username, password: newUser.password})
+
+
+
+CodeFactories.service("User",["$http", User])

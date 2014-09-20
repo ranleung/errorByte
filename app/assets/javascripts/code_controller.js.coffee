@@ -1,6 +1,6 @@
 CodeControllers = angular.module("CodeControllers", [
-	"ngResource
-"])
+	"ngResource"
+])
 
 
 class CodesCtrl
@@ -24,4 +24,4 @@ class CodesCtrl
 
 
 
-CodeControllers.controller("CodesCtrl", ["$scope", "$http", "$resource", "Code","$sce",CodesCtrl])
+CodeControllers.controller("CodesCtrl", ["$scope", "$http", "$resource", "Code", "$sce", CodesCtrl])

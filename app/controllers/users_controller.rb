@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
+		p user_params
 		respond_with User.create(user_params)
 	end
 

@@ -3,5 +3,6 @@ angular.module("CodesApp", [
 	"CodeControllers",
 	"SiteControllers",
 	"UserControllers",
-	"CodeFactories"
+	"CodeFactories",
+	"hljs"
 ])
