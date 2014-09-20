@@ -16,10 +16,15 @@ class Router
 
 		# Route for creating a new user
 		@routeProvider.
-			when "/users/new",
+			when "/signup",
 				templateUrl: "/user_templates",
 				controller: "UsersCtrl as users"
 
+		# Route for creating sessions
+		@routeProvider.
+			when "/login",
+				templateUrl: "/session_templates",
+				controller: "SessionsCtrl as sessions"
 
 		@locationProvider.html5Mode(true)
 

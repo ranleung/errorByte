@@ -13,9 +13,13 @@ Router = (function() {
       templateUrl: "/code_templates",
       controller: "CodesCtrl as codes"
     });
-    this.routeProvider.when("/users/new", {
+    this.routeProvider.when("/signup", {
       templateUrl: "/user_templates",
       controller: "UsersCtrl as users"
+    });
+    this.routeProvider.when("/login", {
+      templateUrl: "/session_templates",
+      controller: "SessionsCtrl as sessions"
     });
     this.locationProvider.html5Mode(true);
   }
