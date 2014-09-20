@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 	resources :site_templates
 	resources :user_templates
 
+	match '*path' => redirect('/'), via: :get
+
 end
