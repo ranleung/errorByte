@@ -15,4 +15,5 @@
 //= require angular/angular.min
 //= require angular-route/angular-route.min
 //= require angular-resource/angular-resource.min
+//= require bootstrap.min
 //= require_tree .

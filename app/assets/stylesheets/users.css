@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
 
 .wrap{
-  padding:120px 0;
+  padding:100px 0;
   font-size:62px;
   color:#888;
   width:400px;
@@ -31,7 +31,7 @@ button{
   border:0;
   background:transparent;
   padding:5px;
-  margin-top:50px;
+  margin-top:20px;
   position:relative;
 }
 
@@ -55,3 +55,4 @@ border-width: 5px;
   float:right;
   border-radius: 10px;
 }
+
