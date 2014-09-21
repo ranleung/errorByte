@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 	
 	get '/signup', to: 'users#new'
 
-	# get '/login', to: 'session#new'
- #  post '/login', to: 'session#create'
- #  post 'session/destroy', to: 'session#destroy' 
+	get '/login', to: 'session#new'
+  post '/login', to: 'session#create'
+  post 'session/destroy', to: 'session#destroy' 
 
 	resources :users
 	resources :codes
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 	resources :code_templates
 	resources :site_templates
 	resources :user_templates
-	resources :session_templates
+	# resources :session_templates
 
 	match '*path' => redirect('/'), via: :get
 

@@ -21,10 +21,10 @@ class Router
 				controller: "UsersCtrl as users"
 
 		# Route for creating sessions
-		@routeProvider.
-			when "/login",
-				templateUrl: "/session_templates",
-				controller: "SessionsCtrl as sessions"
+		# @routeProvider.
+		# 	when "/login",
+		# 		templateUrl: "/session",
+		# 		controller: "SessionsCtrl as sessions"
 
 		@locationProvider.html5Mode(true)
 

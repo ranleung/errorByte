@@ -17,10 +17,6 @@ Router = (function() {
       templateUrl: "/user_templates",
       controller: "UsersCtrl as users"
     });
-    this.routeProvider.when("/login", {
-      templateUrl: "/session_templates",
-      controller: "SessionsCtrl as sessions"
-    });
     this.locationProvider.html5Mode(true);
   }
 

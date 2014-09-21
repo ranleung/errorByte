@@ -4,7 +4,9 @@ class SessionsCtrl
 
 	constructor: (@scope, @http, @resource)->
 
+	addSession: (loginUser)->
+		console.log(loginUser)
+		
 
 
-
-SessionController.controller("SessionsCtrl", ["$scope", "$http", "$resource", SessionsCtrl])
+SessionController.controller("SessionsCtrl", ["$scope", "$http", "$resource", SessionsCtrl]) 

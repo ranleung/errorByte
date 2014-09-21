@@ -1,2 +1,18 @@
 <h1>Session#new</h1>
 <p>Find me in app/views/session/new.html.erb</p>
+
+
+
+<h1>Log In</h1>
+<p>Test to see if Angular is Working: {{1+2}}</p>
+
+<a href="/">Home</a><br>
+Don't have an account? <a href="signup">Sign Up</a>
+
+<form ng-submit="sessions.addSession(loginUser)">
+	<input type="text" placeholder="Username" ng-model="loginUser.username" autofocus required>
+	<input type="password" placeholder="Password" ng-model="loginUser.password" required>
+	<button>Log In</button>
+</form>
+
+

@@ -10,6 +10,10 @@ SessionsCtrl = (function() {
     this.resource = resource;
   }
 
+  SessionsCtrl.prototype.addSession = function(loginUser) {
+    return console.log(loginUser);
+  };
+
   return SessionsCtrl;
 
 })();
