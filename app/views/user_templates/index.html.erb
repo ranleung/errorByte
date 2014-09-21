@@ -1,13 +1,23 @@
-<p>Test to see if Angular is Working: {{1+2}}</p>
+<div class="container">
+	<div class="row">
 
-<a href="/">Home</a><br>
-Already have an account? <a href="login">Log In</a>
-<h1>This is where I create a new User</h1>
+		<div class="wrap">
+			Sign Up
+			<form ng-submit="users.addUser(newUser)">
+				<input type="text" id="username" placeholder="Username" ng-model="newUser.username" autofocus required>
+				<input type="password" id="password" placeholder="Password" ng-model="newUser.password" required>
+				<button class='createUser'>Join</button>
+			</form>
+		</div>
+	</div>
 
-<form ng-submit="users.addUser(newUser)">
-	<input type="text" placeholder="Username" ng-model="newUser.username" autofocus required>
-	<input type="password" placeholder="Password" ng-model="newUser.password" required>
-	<button>Create</button>
-</form>
+	<div class="row text-center">
 
-{{users.greeting}}
+		<a href="/" class=>Home</a><br>
+		Already have an account? <a href="login">Log In</a>
+
+	</div>
+</div>
+
+
+
