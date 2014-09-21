@@ -3,6 +3,7 @@ angular.module("CodesApp", [
 	"CodeControllers",
 	"SiteControllers",
 	"UserControllers",
+	"AboutControllers",
 	# "SessionController",
 	"CodeFactories",
 	"hljs"

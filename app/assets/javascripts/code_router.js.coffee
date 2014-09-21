@@ -20,11 +20,18 @@ class Router
 				templateUrl: "/user_templates",
 				controller: "UsersCtrl as users"
 
+		# Route for about page
+		@routeProvider.
+			when "/abouts",
+				templateUrl: "/about_templates",
+				controller: "AboutsCtrl as abouts"
+
 		# Route for creating sessions
 		# @routeProvider.
 		# 	when "/login",
 		# 		templateUrl: "/session",
 		# 		controller: "SessionsCtrl as sessions"
+
 
 		@locationProvider.html5Mode(true)
 

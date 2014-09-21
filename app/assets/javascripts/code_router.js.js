@@ -17,6 +17,10 @@ Router = (function() {
       templateUrl: "/user_templates",
       controller: "UsersCtrl as users"
     });
+    this.routeProvider.when("/abouts", {
+      templateUrl: "/about_templates",
+      controller: "AboutsCtrl as abouts"
+    });
     this.locationProvider.html5Mode(true);
   }
 

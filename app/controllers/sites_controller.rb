@@ -3,8 +3,7 @@ class SitesController < ApplicationController
 	def index
 	end
 
-	def new
-		
+	def new		
 	end
 	
 end
