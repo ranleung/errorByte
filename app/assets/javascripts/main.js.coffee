@@ -6,5 +6,6 @@ angular.module("CodesApp", [
 	"AboutControllers",
 	# "SessionController",
 	"CodeFactories",
+	"ui.bootstrap",
 	"hljs"
 ])

@@ -16,6 +16,7 @@ class CodesCtrl
 
 			# HTML escaping in angular
 			@question= data[0].question
+			@hint = data[0].hint
 			@level = data[0].level
 			@correctCode = @sce.trustAsHtml(@correct)
 			@wrongCode = @sce.trustAsHtml(@wrong)
@@ -31,6 +32,7 @@ class CodesCtrl
 		console.log("NEXT BUTTON IS PRESSED, NOW AT PAGE", @beginnerCounter)
 		@question = @data[@beginnerCounter].question
 		@level = @data[@beginnerCounter].level
+		@hint = @data[@beginnerCounter].hint
 		@correct = @data[@beginnerCounter].correctCode
 		@wrong = @data[@beginnerCounter].wrongCode
 		@correctCode = @sce.trustAsHtml(@correct)
@@ -42,6 +44,7 @@ class CodesCtrl
 		console.log("PREVIOUS BUTTON IS PRESSED, NOW AT PAGE", @beginnerCounter)
 		@question = @data[@beginnerCounter].question
 		@level = @data[@beginnerCounter].level
+		@hint = @data[@beginnerCounter].hint
 		@correct = @data[@beginnerCounter].correctCode
 		@wrong = @data[@beginnerCounter].wrongCode
 		@correctCode = @sce.trustAsHtml(@correct)

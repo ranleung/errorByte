@@ -18,6 +18,7 @@ CodesCtrl = (function() {
         _this.wrong = data[0].wrongCode;
         console.log("DATA:", _this.data[0].level);
         _this.question = data[0].question;
+        _this.hint = data[0].hint;
         _this.level = data[0].level;
         _this.correctCode = _this.sce.trustAsHtml(_this.correct);
         return _this.wrongCode = _this.sce.trustAsHtml(_this.wrong);
@@ -32,6 +33,7 @@ CodesCtrl = (function() {
     console.log("NEXT BUTTON IS PRESSED, NOW AT PAGE", this.beginnerCounter);
     this.question = this.data[this.beginnerCounter].question;
     this.level = this.data[this.beginnerCounter].level;
+    this.hint = this.data[this.beginnerCounter].hint;
     this.correct = this.data[this.beginnerCounter].correctCode;
     this.wrong = this.data[this.beginnerCounter].wrongCode;
     this.correctCode = this.sce.trustAsHtml(this.correct);
@@ -43,6 +45,7 @@ CodesCtrl = (function() {
     console.log("PREVIOUS BUTTON IS PRESSED, NOW AT PAGE", this.beginnerCounter);
     this.question = this.data[this.beginnerCounter].question;
     this.level = this.data[this.beginnerCounter].level;
+    this.hint = this.data[this.beginnerCounter].hint;
     this.correct = this.data[this.beginnerCounter].correctCode;
     this.wrong = this.data[this.beginnerCounter].wrongCode;
     this.correctCode = this.sce.trustAsHtml(this.correct);

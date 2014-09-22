@@ -10,7 +10,7 @@
 randall = User.create({username: "ranleung", password: "111"})
 
 beginner1 = randall.codes.create({level: "Beginner", question: "Error Message: Unexpected end of input", correctCode: "var time = 5; <br><br>if (time < 20) {<br> console.log('Good day'); <br>}", wrongCode: "var time = 5; <br><br>if (time < 20) { <br>console.log('Good day');", hint: "control flow"})
-beginner2 = randall.codes.create({level: "Beginner", question: "Error Message: Unexpected identifier", correctCode: "var time = 5; <br><br>if time < 1 { <br>console.log(“true”) <br>};", wrongCode: "var time = 5; <br><br>if time < 1 { <br>console.log(“true”) <br>};"})
+beginner2 = randall.codes.create({level: "Beginner", question: "Error Message: Unexpected identifier", correctCode: "var time = 5; <br><br>if time < 1 { <br>console.log(“true”) <br>};", wrongCode: "var time = 5; <br><br>if time < 1 { <br>console.log(“true”) <br>};", hint: "syntax error"})
 beginner3 = randall.codes.create({level: "Beginner", question: "Which code yields 0?", correctCode: "console.log(64%2);", wrongCode: "console.log(64%3);", hint:"modulus"})
 beginner4 = randall.codes.create({level: "Beginner", question: "Which code yields 'derf'?", correctCode: "console.log('wonderful day'.substring(3,7));", wrongCode: " console.log('wonderful day'.substring(4,7));", hint: "The substring() method extracts the characters from a string, between two specified indices, and returns the new sub string."})
 beginner5 = randall.codes.create({level: "Beginner", question: "Which code yields an infinite loop?", correctCode: "var i = 5;<br><br>while (i < 51) { <br>console.log(i); <br>}", wrongCode: "for (var i = 5; i < 51; i+=5) {<br>console.log(i);<br>}", hint: "Where does/doesn't it increment?"})
