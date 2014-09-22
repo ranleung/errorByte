@@ -2,32 +2,19 @@
 <div class="container">
 	<div class="row text-center">
 
-			
-			<h2>Error</h2>
+			<h2>Error: {{codes.data[0].question}}</h2>
 	</div>
 	
 	<div class="row">
 		<div class="col-md-6">
-			<div hljs>
-var time = 5; 
-if (time < 20) { 
-  console.log('Good day'); 
-}			</div>
+			<pre><code><i ng-bind-html="codes.correctCode"></i></code></pre>
 		</div>
 		
 		<div class="col-md-6">
-			<div hljs>
-			
-			</div>
+			<pre><code><i ng-bind-html="codes.wrongCode"></i></code></pre>
+
 		</div>
 	</div> <!-- Row Close -->
 
 
 </div> <!-- Container Close -->
-
-
-<pre>
-<code>
-<i ng-bind-html="codes.correctCode"></i>
-</code>
-</pre>

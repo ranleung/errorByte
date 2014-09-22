@@ -14,9 +14,12 @@ CodesCtrl = (function() {
     this.Code = this.resource("/codes/:id.json");
     this.Code.query((function(_this) {
       return function(data) {
-        _this.codes = data[0].correctCode;
+        _this.data = data;
+        _this.correct = data[0].correctCode;
+        _this.wrong = data[0].wrongCode;
         console.log(_this.codes);
-        return _this.correctCode = _this.sce.trustAsHtml(_this.codes);
+        _this.correctCode = _this.sce.trustAsHtml(_this.correct);
+        return _this.wrongCode = _this.sce.trustAsHtml(_this.wrong);
       };
     })(this));
   }
