@@ -9,6 +9,6 @@
 
 randall = User.create({username: "ranleung", password: "111"})
 
-js = randall.codes.create({level: "begin", question: "Unexpected end of input", correctCode: "if (time < 20) { console.log('Good day'); }", wrongCode: "if (time < 20) { console.log('Good day');", hint: "control flow"})
+js = randall.codes.create({level: "begin", question: "Unexpected end of input", correctCode: "if (time < 20) {<br> console.log('Good day'); <br>} ", wrongCode: "if (time < 20) {<br> console.log('Good day');", hint: "control flow"})
 
 
