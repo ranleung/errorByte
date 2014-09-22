@@ -27,7 +27,7 @@
 
 	<!-- Level -->
 	<div class="row text-center">
-		{{codes.level}}
+		Level: {{codes.level}}
 	</div>
 
 	<!-- Pagination -->
@@ -37,7 +37,7 @@
 
 
 	<div class="row text-center">	
-		<button>Previous</button>
+		<button ng-click="codes.previous()">Previous</button>
 		<button ng-click="codes.next()">Next</button>
 	</div>
 

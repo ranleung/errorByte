@@ -6,8 +6,6 @@ CodeControllers = angular.module("CodeControllers", [
 class CodesCtrl
 
 	constructor: (@scope, @http, @resource, @Code, @sce)->
-		# Use to test if angular is running
-		@greeting = "hello world"
 		# Making a call to the db
 		@Code = @resource("/codes/:id.json")
 		@Code.query (data)=>
@@ -22,9 +20,31 @@ class CodesCtrl
 			@correctCode = @sce.trustAsHtml(@correct)
 			@wrongCode = @sce.trustAsHtml(@wrong)
 
+		# Counter for page count
+		@i = 0
+		console.log(@i)
+
 	
 	next: ()->
-		console.log("hi")
+		# Increase the counter when next is pressed
+		@i += 1
+		console.log("NEXT BUTTON IS PRESSED, NOW AT PAGE", @i)
+		@question = @data[@i].question
+		@level = @data[@i].level
+		@correct = @data[@i].correctCode
+		@wrong = @data[@i].wrongCode
+		@correctCode = @sce.trustAsHtml(@correct)
+		@wrongCode = @sce.trustAsHtml(@wrong)
+
+	previous: ()->
+		@i -= 1
+		console.log("PREVIOUS BUTTON IS PRESSED, NOW AT PAGE", @i)
+		@question = @data[@i].question
+		@level = @data[@i].level
+		@correct = @data[@i].correctCode
+		@wrong = @data[@i].wrongCode
+		@correctCode = @sce.trustAsHtml(@correct)
+		@wrongCode = @sce.trustAsHtml(@wrong)
 
 
 

@@ -10,7 +10,6 @@ CodesCtrl = (function() {
     this.resource = resource;
     this.Code = Code;
     this.sce = sce;
-    this.greeting = "hello world";
     this.Code = this.resource("/codes/:id.json");
     this.Code.query((function(_this) {
       return function(data) {
@@ -24,10 +23,30 @@ CodesCtrl = (function() {
         return _this.wrongCode = _this.sce.trustAsHtml(_this.wrong);
       };
     })(this));
+    this.i = 0;
+    console.log(this.i);
   }
 
   CodesCtrl.prototype.next = function() {
-    return console.log("hi");
+    this.i += 1;
+    console.log("NEXT BUTTON IS PRESSED, NOW AT PAGE", this.i);
+    this.question = this.data[this.i].question;
+    this.level = this.data[this.i].level;
+    this.correct = this.data[this.i].correctCode;
+    this.wrong = this.data[this.i].wrongCode;
+    this.correctCode = this.sce.trustAsHtml(this.correct);
+    return this.wrongCode = this.sce.trustAsHtml(this.wrong);
+  };
+
+  CodesCtrl.prototype.previous = function() {
+    this.i -= 1;
+    console.log("PREVIOUS BUTTON IS PRESSED, NOW AT PAGE", this.i);
+    this.question = this.data[this.i].question;
+    this.level = this.data[this.i].level;
+    this.correct = this.data[this.i].correctCode;
+    this.wrong = this.data[this.i].wrongCode;
+    this.correctCode = this.sce.trustAsHtml(this.correct);
+    return this.wrongCode = this.sce.trustAsHtml(this.wrong);
   };
 
   return CodesCtrl;
