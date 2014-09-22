@@ -37,8 +37,8 @@
 
 
 	<div class="row text-center">	
-		<button ng-click="codes.previous()">Previous</button>
-		<button ng-click="codes.next()">Next</button>
+		<button class="btn btn-success"ng-click="codes.previous()" ng-if="codes.beginnerCounter > 0">Previous</button>
+		<button class="btn btn-success" ng-click="codes.next()" ng-if="codes.beginnerCounter < 2">Next</button>
 	</div>
 
 </div> <!-- Container Close -->

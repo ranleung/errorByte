@@ -23,28 +23,28 @@ CodesCtrl = (function() {
         return _this.wrongCode = _this.sce.trustAsHtml(_this.wrong);
       };
     })(this));
-    this.i = 0;
-    console.log(this.i);
+    this.beginnerCounter = 0;
+    console.log(this.beginnerCounter);
   }
 
   CodesCtrl.prototype.next = function() {
-    this.i += 1;
-    console.log("NEXT BUTTON IS PRESSED, NOW AT PAGE", this.i);
-    this.question = this.data[this.i].question;
-    this.level = this.data[this.i].level;
-    this.correct = this.data[this.i].correctCode;
-    this.wrong = this.data[this.i].wrongCode;
+    this.beginnerCounter += 1;
+    console.log("NEXT BUTTON IS PRESSED, NOW AT PAGE", this.beginnerCounter);
+    this.question = this.data[this.beginnerCounter].question;
+    this.level = this.data[this.beginnerCounter].level;
+    this.correct = this.data[this.beginnerCounter].correctCode;
+    this.wrong = this.data[this.beginnerCounter].wrongCode;
     this.correctCode = this.sce.trustAsHtml(this.correct);
     return this.wrongCode = this.sce.trustAsHtml(this.wrong);
   };
 
   CodesCtrl.prototype.previous = function() {
-    this.i -= 1;
-    console.log("PREVIOUS BUTTON IS PRESSED, NOW AT PAGE", this.i);
-    this.question = this.data[this.i].question;
-    this.level = this.data[this.i].level;
-    this.correct = this.data[this.i].correctCode;
-    this.wrong = this.data[this.i].wrongCode;
+    this.beginnerCounter -= 1;
+    console.log("PREVIOUS BUTTON IS PRESSED, NOW AT PAGE", this.beginnerCounter);
+    this.question = this.data[this.beginnerCounter].question;
+    this.level = this.data[this.beginnerCounter].level;
+    this.correct = this.data[this.beginnerCounter].correctCode;
+    this.wrong = this.data[this.beginnerCounter].wrongCode;
     this.correctCode = this.sce.trustAsHtml(this.correct);
     return this.wrongCode = this.sce.trustAsHtml(this.wrong);
   };

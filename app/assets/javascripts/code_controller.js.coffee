@@ -21,28 +21,29 @@ class CodesCtrl
 			@wrongCode = @sce.trustAsHtml(@wrong)
 
 		# Counter for page count
-		@i = 0
-		console.log(@i)
+		@beginnerCounter = 0
+		console.log(@beginnerCounter)
 
 	
 	next: ()->
 		# Increase the counter when next is pressed
-		@i += 1
-		console.log("NEXT BUTTON IS PRESSED, NOW AT PAGE", @i)
-		@question = @data[@i].question
-		@level = @data[@i].level
-		@correct = @data[@i].correctCode
-		@wrong = @data[@i].wrongCode
+		@beginnerCounter += 1
+		console.log("NEXT BUTTON IS PRESSED, NOW AT PAGE", @beginnerCounter)
+		@question = @data[@beginnerCounter].question
+		@level = @data[@beginnerCounter].level
+		@correct = @data[@beginnerCounter].correctCode
+		@wrong = @data[@beginnerCounter].wrongCode
 		@correctCode = @sce.trustAsHtml(@correct)
 		@wrongCode = @sce.trustAsHtml(@wrong)
 
 	previous: ()->
-		@i -= 1
-		console.log("PREVIOUS BUTTON IS PRESSED, NOW AT PAGE", @i)
-		@question = @data[@i].question
-		@level = @data[@i].level
-		@correct = @data[@i].correctCode
-		@wrong = @data[@i].wrongCode
+		# Decrease counter when previous is pressed
+		@beginnerCounter -= 1
+		console.log("PREVIOUS BUTTON IS PRESSED, NOW AT PAGE", @beginnerCounter)
+		@question = @data[@beginnerCounter].question
+		@level = @data[@beginnerCounter].level
+		@correct = @data[@beginnerCounter].correctCode
+		@wrong = @data[@beginnerCounter].wrongCode
 		@correctCode = @sce.trustAsHtml(@correct)
 		@wrongCode = @sce.trustAsHtml(@wrong)
 
