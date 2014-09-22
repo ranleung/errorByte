@@ -24,7 +24,8 @@ CodesCtrl = (function() {
         return _this.wrongCode = _this.sce.trustAsHtml(_this.wrong);
       };
     })(this));
-    this.totalItems = 80;
+    this.totalItems = 100;
+    this.totalPages = 10;
     this.currentPage = 1;
   }
 

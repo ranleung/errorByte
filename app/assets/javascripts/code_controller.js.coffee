@@ -22,7 +22,8 @@ class CodesCtrl
 			@wrongCode = @sce.trustAsHtml(@wrong)
 
 		# When first load on page
-		@totalItems = 80
+		@totalItems = 100
+		@totalPages = 10
 		@currentPage = 1
 
 	# Page Change for pagination

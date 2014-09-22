@@ -35,7 +35,7 @@
 
 	<!-- Pagination -->
 	<div class="row text-center">
-		<h5>Question: {{codes.beginnerCounter+1}}/8</h5>
+		<h5>Question: {{codes.beginnerCounter+1}}/{{codes.totalPages}}</h5>
 		<pagination total-items="codes.totalItems" ng-model="codes.currentPage" ng-change="codes.pageChanged()"></pagination>
 	</div>
 
