@@ -1,0 +1,2 @@
+module IntermediateHelper
+end

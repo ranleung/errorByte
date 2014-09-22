@@ -4,6 +4,7 @@ angular.module("CodesApp", [
 	"SiteControllers",
 	"UserControllers",
 	"AboutControllers",
+	"IntermediateControllers",
 	# "SessionController",
 	"CodeFactories",
 	"ui.bootstrap",

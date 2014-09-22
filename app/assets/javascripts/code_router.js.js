@@ -21,6 +21,10 @@ Router = (function() {
       templateUrl: "/code_templates",
       controller: "CodesCtrl as codes"
     });
+    this.routeProvider.when("/intermediates", {
+      templateUrl: "/intermediate_templates",
+      controller: "IntermediatesCtrl as intermediates"
+    });
     this.locationProvider.html5Mode(true);
   }
 

@@ -20,11 +20,17 @@ class Router
 				templateUrl: "/user_templates",
 				controller: "UsersCtrl as users"
 
-		# Route to code challenges
+		# Route to Beginner code challenges
 		@routeProvider.
 			when "/codes",
 				templateUrl: "/code_templates",
 				controller: "CodesCtrl as codes"
+
+		# Route to Intermediate code challenges
+		@routeProvider.
+			when "/intermediates",
+				templateUrl: "/intermediate_templates",
+				controller: "IntermediatesCtrl as intermediates"
 
 		# Route for creating sessions
 		# @routeProvider.
