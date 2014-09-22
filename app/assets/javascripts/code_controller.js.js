@@ -26,13 +26,13 @@ CodesCtrl = (function() {
     })(this));
     this.totalItems = 100;
     this.totalPages = 10;
-    this.bar = 10;
+    this.progressBar = 10;
   }
 
   CodesCtrl.prototype.pageChanged = function() {
     console.log("Page changed to: ", this.currentPage);
     this.beginnerCounter = this.currentPage - 1;
-    this.bar = this.currentPage * 10;
+    this.progressBar = this.currentPage * 10;
     this.question = this.data[this.beginnerCounter].question;
     this.level = this.data[this.beginnerCounter].level;
     this.hint = this.data[this.beginnerCounter].hint;

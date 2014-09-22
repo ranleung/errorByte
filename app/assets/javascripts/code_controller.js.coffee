@@ -24,13 +24,13 @@ class CodesCtrl
 		# When first load on page
 		@totalItems = 100
 		@totalPages = 10
-		@bar = 10
+		@progressBar = 10
 
 	# Page Change for pagination
 	pageChanged: ()->
 		console.log("Page changed to: ", @currentPage)
 		@beginnerCounter = @currentPage - 1
-		@bar = @currentPage * 10
+		@progressBar = @currentPage * 10
 		# console.log(@currentPage)
 		@question = @data[@beginnerCounter].question
 		@level = @data[@beginnerCounter].level

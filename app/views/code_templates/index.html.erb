@@ -3,7 +3,7 @@
 	<div class="row text-center">
 		<h5>Success or fail pop up goes here</h5>
 		<h2>{{codes.question}}</h2>
-		<progressbar value="codes.bar"></progressbar>
+		<progressbar value="codes.progressBar"></progressbar>
 	</div>
 	
 	<div class="row">
@@ -34,5 +34,11 @@
 		<h5>Question: {{codes.beginnerCounter+1}}/{{codes.totalPages}}</h5>
 		<pagination total-items="codes.totalItems" ng-model="codes.currentPage" ng-change="codes.pageChanged()"></pagination>
 	</div>
+
+
+	<hr>
+	<div class="footer">
+    <p>&copy; errorByte 2014</p>
+  </div>
 
 </div> <!-- Container Close -->
