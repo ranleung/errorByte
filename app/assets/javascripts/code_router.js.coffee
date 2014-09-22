@@ -29,7 +29,7 @@ class Router
 		# Route for creating sessions
 		# @routeProvider.
 		# 	when "/login",
-		# 		templateUrl: "/session",
+		# 		templateUrl: "/session_templates",
 		# 		controller: "SessionsCtrl as sessions"
 
 

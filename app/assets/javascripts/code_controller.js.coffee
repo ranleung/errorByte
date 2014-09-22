@@ -11,10 +11,10 @@ class CodesCtrl
 		# Making a call to the db
 		@Code = @resource("/codes/:id.json")
 		@Code.query (data)=>
-			@codes = data
+			@codes = data[0].correctCode
 			console.log(@codes)
 			# HTML escaping in angular
-			@correctCode = @sce.trustAsHtml("if (time < 20) { <br />console.log('Good day');<br>}")
+			@correctCode = @sce.trustAsHtml(@codes)
 
 
 

@@ -14,9 +14,9 @@ CodesCtrl = (function() {
     this.Code = this.resource("/codes/:id.json");
     this.Code.query((function(_this) {
       return function(data) {
-        _this.codes = data;
+        _this.codes = data[0].correctCode;
         console.log(_this.codes);
-        return _this.correctCode = _this.sce.trustAsHtml("if (time < 20) { <br />console.log('Good day');<br>}");
+        return _this.correctCode = _this.sce.trustAsHtml(_this.codes);
       };
     })(this));
   }
