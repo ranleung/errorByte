@@ -1,5 +1,5 @@
 CodeControllers = angular.module("CodeControllers", [
-	"ngResource"
+	"ngResource", "ui.bootstrap"
 ])
 
 
@@ -21,15 +21,14 @@ class CodesCtrl
 			@correctCode = @sce.trustAsHtml(@correct)
 			@wrongCode = @sce.trustAsHtml(@wrong)
 
-		# Counter for page count
-		@beginnerCounter = 0
-		console.log(@beginnerCounter)
+		# When first load on page
+		@totalItems = 80
+		@currentPage = 1
 
-	
-	next: ()->
-		# Increase the counter when next is pressed
-		@beginnerCounter += 1
-		console.log("NEXT BUTTON IS PRESSED, NOW AT PAGE", @beginnerCounter)
+	# Page Change for pagination
+	pageChanged: ()->
+		console.log("Page changed to: ", @currentPage)
+		@beginnerCounter = @currentPage - 1
 		@question = @data[@beginnerCounter].question
 		@level = @data[@beginnerCounter].level
 		@hint = @data[@beginnerCounter].hint
@@ -38,17 +37,7 @@ class CodesCtrl
 		@correctCode = @sce.trustAsHtml(@correct)
 		@wrongCode = @sce.trustAsHtml(@wrong)
 
-	previous: ()->
-		# Decrease counter when previous is pressed
-		@beginnerCounter -= 1
-		console.log("PREVIOUS BUTTON IS PRESSED, NOW AT PAGE", @beginnerCounter)
-		@question = @data[@beginnerCounter].question
-		@level = @data[@beginnerCounter].level
-		@hint = @data[@beginnerCounter].hint
-		@correct = @data[@beginnerCounter].correctCode
-		@wrong = @data[@beginnerCounter].wrongCode
-		@correctCode = @sce.trustAsHtml(@correct)
-		@wrongCode = @sce.trustAsHtml(@wrong)
+
 
 
 
