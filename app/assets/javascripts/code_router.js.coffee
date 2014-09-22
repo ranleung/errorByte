@@ -8,11 +8,11 @@ class Router
 				templateUrl: "/site_templates",
 				controller: "SitesCtrl as sites"
 
-		# Rout to code challenges
+		# Route for about page
 		@routeProvider.
-			when "/codes",
-				templateUrl: "/code_templates",
-				controller: "CodesCtrl as codes"
+			when "/abouts",
+				templateUrl: "/about_templates",
+				controller: "AboutsCtrl as abouts"
 
 		# Route for creating a new user
 		@routeProvider.
@@ -20,11 +20,11 @@ class Router
 				templateUrl: "/user_templates",
 				controller: "UsersCtrl as users"
 
-		# Route for about page
+		# Route to code challenges
 		@routeProvider.
-			when "/abouts",
-				templateUrl: "/about_templates",
-				controller: "AboutsCtrl as abouts"
+			when "/codes",
+				templateUrl: "/code_templates",
+				controller: "CodesCtrl as codes"
 
 		# Route for creating sessions
 		# @routeProvider.

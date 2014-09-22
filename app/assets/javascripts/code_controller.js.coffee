@@ -19,7 +19,7 @@ class CodesCtrl
 			@correctCode = @sce.trustAsHtml(@correct)
 			@wrongCode = @sce.trustAsHtml(@wrong)
 
-
+	
 
 
 

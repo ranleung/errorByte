@@ -9,17 +9,17 @@ Router = (function() {
       templateUrl: "/site_templates",
       controller: "SitesCtrl as sites"
     });
-    this.routeProvider.when("/codes", {
-      templateUrl: "/code_templates",
-      controller: "CodesCtrl as codes"
+    this.routeProvider.when("/abouts", {
+      templateUrl: "/about_templates",
+      controller: "AboutsCtrl as abouts"
     });
     this.routeProvider.when("/signup", {
       templateUrl: "/user_templates",
       controller: "UsersCtrl as users"
     });
-    this.routeProvider.when("/abouts", {
-      templateUrl: "/about_templates",
-      controller: "AboutsCtrl as abouts"
+    this.routeProvider.when("/codes", {
+      templateUrl: "/code_templates",
+      controller: "CodesCtrl as codes"
     });
     this.locationProvider.html5Mode(true);
   }
