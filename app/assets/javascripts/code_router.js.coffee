@@ -29,8 +29,8 @@ class Router
 		# Route to Intermediate code challenges
 		@routeProvider.
 			when "/intermediates",
-				templateUrl: "/intermediate_templates",
-				controller: "IntermediatesCtrl as intermediates"
+				templateUrl: "/code_templates",
+				controller: "IntermediatesCtrl as codes"
 
 		# Route for creating sessions
 		# @routeProvider.

@@ -12,7 +12,8 @@ IntermediatesCtrl = (function() {
     this.Code = this.resource("/codes/:id.json");
     this.Code.query((function(_this) {
       return function(data) {
-        return _this.data = data;
+        _this.data = data;
+        return _this.level = data[0].level;
       };
     })(this));
   }

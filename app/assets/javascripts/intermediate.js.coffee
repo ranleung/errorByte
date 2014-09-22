@@ -9,7 +9,7 @@ class IntermediatesCtrl
 		@Code = @resource("/codes/:id.json")
 		@Code.query (data)=>
 			@data = data
-
+			@level = data[0].level
 
 
 
