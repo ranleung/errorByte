@@ -17,12 +17,18 @@ CodesCtrl = (function() {
         _this.data = data;
         _this.correct = data[0].correctCode;
         _this.wrong = data[0].wrongCode;
-        console.log(_this.codes);
+        console.log("DATA:", _this.data[0].level);
+        _this.question = data[0].question;
+        _this.level = data[0].level;
         _this.correctCode = _this.sce.trustAsHtml(_this.correct);
         return _this.wrongCode = _this.sce.trustAsHtml(_this.wrong);
       };
     })(this));
   }
+
+  CodesCtrl.prototype.next = function() {
+    return console.log("hi");
+  };
 
   return CodesCtrl;
 

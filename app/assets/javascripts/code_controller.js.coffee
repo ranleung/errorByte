@@ -14,13 +14,17 @@ class CodesCtrl
 			@data = data
 			@correct = data[0].correctCode
 			@wrong = data[0].wrongCode
-			console.log(@codes)
+			console.log("DATA:",@data[0].level)
+
 			# HTML escaping in angular
+			@question= data[0].question
+			@level = data[0].level
 			@correctCode = @sce.trustAsHtml(@correct)
 			@wrongCode = @sce.trustAsHtml(@wrong)
 
 	
-
+	next: ()->
+		console.log("hi")
 
 
 

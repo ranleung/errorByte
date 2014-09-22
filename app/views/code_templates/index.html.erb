@@ -1,7 +1,7 @@
 
 <div class="container">
 	<div class="row text-center">
-		<h2>Error: {{codes.data[0].question}}</h2>
+		<h2>{{codes.question}}</h2>
 	</div>
 	
 	<div class="row">
@@ -25,6 +25,11 @@
 		A Progress Bar Will Go Here
 	</div>
 
+	<!-- Level -->
+	<div class="row text-center">
+		{{codes.level}}
+	</div>
+
 	<!-- Pagination -->
 	<div class="row text-center">
 		Pagination Here
@@ -32,8 +37,8 @@
 
 
 	<div class="row text-center">	
-		<a href="javascript:void(0);"><button>Previous</button></a>
-		<a href="/codes2"><button>Next</button></a>
+		<button>Previous</button>
+		<button ng-click="codes.next()">Next</button>
 	</div>
 
 </div> <!-- Container Close -->
