@@ -43,6 +43,14 @@ CodesCtrl = (function() {
     return this.wrongCode = this.sce.trustAsHtml(this.wrong);
   };
 
+  CodesCtrl.prototype.correctCodeClick = function() {
+    return console.log("correctCode");
+  };
+
+  CodesCtrl.prototype.wrongCodeClick = function() {
+    return console.log("wrongCode");
+  };
+
   return CodesCtrl;
 
 })();

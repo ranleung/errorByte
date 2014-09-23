@@ -8,11 +8,11 @@
 	
 	<div class="row">
 		<div class="col-md-6">
-			<pre><code><i ng-bind-html="codes.correctCode"></i></code></pre>
+			<pre id="correctCode" ng-click="codes.correctCodeClick()"><code><i ng-bind-html="codes.correctCode"></i></code></pre>
 		</div>
 
 		<div class="col-md-6">
-			<pre><code><i ng-bind-html="codes.wrongCode"></i></code></pre>
+			<pre id="wrongCode" ng-click="codes.wrongCodeClick()"><code><i ng-bind-html="codes.wrongCode"></i></code></pre>
 		</div>
 	</div> <!-- Row Close -->
 

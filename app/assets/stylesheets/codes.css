@@ -5,3 +5,13 @@
 .progress-bar{
 	border-radius: 10px;
 }
+
+#correctCode{
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#wrongCode{
+	border-radius: 10px;
+	cursor: pointer;
+}

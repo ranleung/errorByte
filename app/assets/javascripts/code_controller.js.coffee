@@ -41,11 +41,13 @@ class CodesCtrl
 		@correctCode = @sce.trustAsHtml(@correct)
 		@wrongCode = @sce.trustAsHtml(@wrong)
 
+	# When clicked on the correct code ...
+	correctCodeClick: ()->
+		console.log("correctCode")
 
-
-
-
-
+	# When clicked on the wrong code ...
+	wrongCodeClick: ()->
+		console.log("wrongCode")
 
 
 CodeControllers.controller("CodesCtrl", ["$scope", "$http", "$resource", "Code", "$sce", CodesCtrl])
