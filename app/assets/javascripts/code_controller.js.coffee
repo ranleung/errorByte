@@ -49,19 +49,26 @@ class CodesCtrl
 		@wrongCode = @sce.trustAsHtml(@wrong)
 		@successAlert = true
 		@dangerAlert = true
-		
+		@beginnerSuccessAlert = true
+
 
 	# When clicked on the correct code ...
 	correctCodeClick: ()->
 		console.log("correctCode!")
-		@successAlert = false
-		@dangerAlert = true
+		if @currentPage is 10
+			@beginnerSuccessAlert = false
+			@dangerAlert = true
+		else
+			@successAlert = false
+			@dangerAlert = true
+			@beginnerSuccessAlert = true
 
 	# When clicked on the wrong code ...
 	wrongCodeClick: ()->
 		console.log("wrongCode!")
 		@dangerAlert = false
 		@successAlert = true
+		@beginnerSuccessAlert = true
 
 
 

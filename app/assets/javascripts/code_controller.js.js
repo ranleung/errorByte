@@ -46,19 +46,27 @@ CodesCtrl = (function() {
     this.correctCode = this.sce.trustAsHtml(this.correct);
     this.wrongCode = this.sce.trustAsHtml(this.wrong);
     this.successAlert = true;
-    return this.dangerAlert = true;
+    this.dangerAlert = true;
+    return this.beginnerSuccessAlert = true;
   };
 
   CodesCtrl.prototype.correctCodeClick = function() {
     console.log("correctCode!");
-    this.successAlert = false;
-    return this.dangerAlert = true;
+    if (this.currentPage === 10) {
+      this.beginnerSuccessAlert = false;
+      return this.dangerAlert = true;
+    } else {
+      this.successAlert = false;
+      this.dangerAlert = true;
+      return this.beginnerSuccessAlert = true;
+    }
   };
 
   CodesCtrl.prototype.wrongCodeClick = function() {
     console.log("wrongCode!");
     this.dangerAlert = false;
-    return this.successAlert = true;
+    this.successAlert = true;
+    return this.beginnerSuccessAlert = true;
   };
 
   return CodesCtrl;
