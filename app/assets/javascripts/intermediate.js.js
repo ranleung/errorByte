@@ -30,6 +30,8 @@ IntermediatesCtrl = (function() {
     this.currentPage = 1;
     this.successAlert = true;
     this.dangerAlert = true;
+    this.beginnerSuccessAlert = true;
+    this.intermediateSuccessAlert = true;
   }
 
   IntermediatesCtrl.prototype.pageChanged = function() {
@@ -42,7 +44,9 @@ IntermediatesCtrl = (function() {
     this.correct = this.data[this.beginnerCounter].correctCode;
     this.wrong = this.data[this.beginnerCounter].wrongCode;
     this.correctCode = this.sce.trustAsHtml(this.correct);
-    return this.wrongCode = this.sce.trustAsHtml(this.wrong);
+    this.wrongCode = this.sce.trustAsHtml(this.wrong);
+    this.successAlert = true;
+    return this.dangerAlert = true;
   };
 
   IntermediatesCtrl.prototype.correctCodeClick = function() {

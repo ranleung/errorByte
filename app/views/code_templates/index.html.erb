@@ -2,6 +2,7 @@
 <div class="container">
 	<div class="row text-center">
 		
+		<!-- Displaying Alert When Right Answer-->
 		<div class="alert alert-success alert-dismissable" ng-hide="codes.successAlert">
 	    <div class="alertwrapper clearfix">
 	      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -14,6 +15,8 @@
 	      </div>
 	    </div>
 	  </div>
+
+	  <!-- Displaying Alert When Wrong Answer-->
 	  <div class="alert alert-danger alert-dismissable" ng-hide="codes.dangerAlert">
 	    <div class="alertwrapper clearfix">
 	      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -27,7 +30,35 @@
 	    </div>
 	  </div>
 
-		<h2>{{codes.question}}</h2>
+	  <!-- Displaying Alert When Right Answer AT the last question FOR Beginner-->
+	  <div class="alert alert-info alert-dismissable" ng-hide="codes.beginnerSuccessAlert">
+	    <div class="alertwrapper clearfix">
+	      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	      <div class="alerticon info">
+	        <span class="glyphicon glyphicon-star"></span>
+	      </div>
+	      <div class="alertcontent">
+	        <h4>All Right!</h4>
+	        You've successfully finished the Beginner Track!  Wasn't that fun?  When are you ready, lets try Intermediate <a href="/intermediates">here</a>
+	      </div>
+	    </div>
+	  </div>
+
+	   <!-- Displaying Alert When Right Answer AT the last question FOR Intermediate-->
+	  <div class="alert alert-info alert-dismissable" ng-hide="codes.intermediateSuccessAlert">
+	    <div class="alertwrapper clearfix">
+	      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	      <div class="alerticon info">
+	        <span class="glyphicon glyphicon-star"></span>
+	      </div>
+	      <div class="alertcontent">
+	        <h4>WOW!</h4>
+	        You are pretty good! Intermediate Level ... checked!  Stay tuned for more coding problems to solve.
+	      </div>
+	    </div>
+	  </div>
+
+		<h3>{{codes.question}}</h3>
 		<progressbar value="codes.progressBar" id="progressBar"></progressbar>
 	</div>
 	
@@ -58,7 +89,6 @@
 		<h5>Question: {{codes.currentPage}}/{{codes.totalPages}}</h5>
 		<pagination total-items="codes.totalItems" ng-model="codes.currentPage" ng-change="codes.pageChanged()"></pagination>
 	</div>
-	
 
 	<hr>
 	<div class="footer">

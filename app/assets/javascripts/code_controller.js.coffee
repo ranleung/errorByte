@@ -30,6 +30,9 @@ class CodesCtrl
 		# Hiding the alerts
 		@successAlert = true
 		@dangerAlert = true
+		# Alerts when reached to the end of each section
+		@beginnerSuccessAlert = true
+		@intermediateSuccessAlert = true
 
 	# Page Change for pagination
 	pageChanged: ()->
@@ -44,6 +47,9 @@ class CodesCtrl
 		@wrong = @data[@beginnerCounter].wrongCode
 		@correctCode = @sce.trustAsHtml(@correct)
 		@wrongCode = @sce.trustAsHtml(@wrong)
+		@successAlert = true
+		@dangerAlert = true
+		
 
 	# When clicked on the correct code ...
 	correctCodeClick: ()->
