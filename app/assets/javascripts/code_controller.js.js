@@ -28,6 +28,8 @@ CodesCtrl = (function() {
     this.totalPages = 10;
     this.progressBar = 10;
     this.currentPage = 1;
+    this.successAlert = true;
+    this.dangerAlert = true;
   }
 
   CodesCtrl.prototype.pageChanged = function() {
@@ -44,11 +46,15 @@ CodesCtrl = (function() {
   };
 
   CodesCtrl.prototype.correctCodeClick = function() {
-    return console.log("correctCode");
+    console.log("correctCode!");
+    this.successAlert = false;
+    return this.dangerAlert = true;
   };
 
   CodesCtrl.prototype.wrongCodeClick = function() {
-    return console.log("wrongCode");
+    console.log("wrongCode!");
+    this.dangerAlert = false;
+    return this.successAlert = true;
   };
 
   return CodesCtrl;

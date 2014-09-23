@@ -1,7 +1,32 @@
 
 <div class="container">
 	<div class="row text-center">
-		<h5>Success or fail pop up goes here</h5>
+		
+		<div class="alert alert-success alert-dismissable" ng-hide="codes.successAlert">
+	    <div class="alertwrapper clearfix">
+	      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	      <div class="alerticon successful">
+	        <span class="glyphicon glyphicon-ok-sign"></span>
+	      </div>
+	      <div class="alertcontent">
+	        <h4>Success!</h4>
+	        Good Work! Feel free to move along to the next question!
+	      </div>
+	    </div>
+	  </div>
+	  <div class="alert alert-danger alert-dismissable" ng-hide="codes.dangerAlert">
+	    <div class="alertwrapper clearfix">
+	      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	      <div class="alerticon dangerous">
+	        <span class="glyphicon glyphicon-warning-sign"></span>
+	      </div>
+	      <div class="alertcontent">
+	        <h4>Uh Oh!</h4>
+	        Unfortunately, its the other choice.  Be sure to use the hint!
+	      </div>
+	    </div>
+	  </div>
+
 		<h2>{{codes.question}}</h2>
 		<progressbar value="codes.progressBar" id="progressBar"></progressbar>
 	</div>

@@ -21,13 +21,17 @@ class IntermediatesCtrl
 			@correctCode = @sce.trustAsHtml(@correct)
 			@wrongCode = @sce.trustAsHtml(@wrong)
 
-		# When first load on page
+		# When first load on page€
 		@totalItems = 100
 		@totalPages = 10
 		@progressBar = 10
 		@currentPage = 1
 
-	# # Page Change for pagination
+		# Hiding the alerts
+		@successAlert = true
+		@dangerAlert = true
+
+	# Page Change for pagination
 	pageChanged: ()->
 		console.log("Page changed to: ", @currentPage)
 		@beginnerCounter = @currentPage - 1 + 10
@@ -41,6 +45,17 @@ class IntermediatesCtrl
 		@correctCode = @sce.trustAsHtml(@correct)
 		@wrongCode = @sce.trustAsHtml(@wrong)
 
+	# When clicked on the correct code ...
+	correctCodeClick: ()->
+		console.log("correctCode!")
+		@successAlert = false
+		@dangerAlert = true
+
+	# When clicked on the wrong code ...
+	wrongCodeClick: ()->
+		console.log("wrongCode!")
+		@dangerAlert = false
+		@successAlert = true
 
 
 

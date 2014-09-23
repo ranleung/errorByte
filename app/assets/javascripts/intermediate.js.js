@@ -28,6 +28,8 @@ IntermediatesCtrl = (function() {
     this.totalPages = 10;
     this.progressBar = 10;
     this.currentPage = 1;
+    this.successAlert = true;
+    this.dangerAlert = true;
   }
 
   IntermediatesCtrl.prototype.pageChanged = function() {
@@ -41,6 +43,18 @@ IntermediatesCtrl = (function() {
     this.wrong = this.data[this.beginnerCounter].wrongCode;
     this.correctCode = this.sce.trustAsHtml(this.correct);
     return this.wrongCode = this.sce.trustAsHtml(this.wrong);
+  };
+
+  IntermediatesCtrl.prototype.correctCodeClick = function() {
+    console.log("correctCode!");
+    this.successAlert = false;
+    return this.dangerAlert = true;
+  };
+
+  IntermediatesCtrl.prototype.wrongCodeClick = function() {
+    console.log("wrongCode!");
+    this.dangerAlert = false;
+    return this.successAlert = true;
   };
 
   return IntermediatesCtrl;

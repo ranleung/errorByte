@@ -15,3 +15,37 @@
 	border-radius: 10px;
 	cursor: pointer;
 }
+
+.alert{
+  padding: 0px !important;
+  border-radius:0;
+  margin: 10px 50px !important;
+}
+
+.alert-dismissable {
+  padding-right: 24px !important;
+}
+
+.alertwrapper{
+  border-radius: 0;
+}
+
+.alerticon{
+  font-size: 2em;
+  float: left;
+  margin-right: 0.5em;
+  padding: 0.5em;
+}
+
+.successful{
+  background-color: #D6E9C6;
+}
+
+.dangerous{
+  background-color: #EBCCD1;
+}
+
+.alertcontent{
+  padding: 0.5em;
+  overflow: hidden;
+}

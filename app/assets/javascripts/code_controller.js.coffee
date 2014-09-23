@@ -27,6 +27,10 @@ class CodesCtrl
 		@progressBar = 10
 		@currentPage = 1
 
+		# Hiding the alerts
+		@successAlert = true
+		@dangerAlert = true
+
 	# Page Change for pagination
 	pageChanged: ()->
 		console.log("Page changed to: ", @currentPage)
@@ -43,11 +47,30 @@ class CodesCtrl
 
 	# When clicked on the correct code ...
 	correctCodeClick: ()->
-		console.log("correctCode")
+		console.log("correctCode!")
+		@successAlert = false
+		@dangerAlert = true
 
 	# When clicked on the wrong code ...
 	wrongCodeClick: ()->
-		console.log("wrongCode")
+		console.log("wrongCode!")
+		@dangerAlert = false
+		@successAlert = true
+
+
+
+
+
+
+
+
+
 
 
 CodeControllers.controller("CodesCtrl", ["$scope", "$http", "$resource", "Code", "$sce", CodesCtrl])
+
+
+
+
+
+
