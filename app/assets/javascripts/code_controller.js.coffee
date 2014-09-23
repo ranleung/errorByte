@@ -55,6 +55,7 @@ class CodesCtrl
 	# When clicked on the correct code ...
 	correctCodeClick: ()->
 		console.log("correctCode!")
+		# When on the last question, display a finished course alert
 		if @currentPage is 10
 			@beginnerSuccessAlert = false
 			@dangerAlert = true

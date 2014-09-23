@@ -48,18 +48,26 @@ class IntermediatesCtrl
 		@wrongCode = @sce.trustAsHtml(@wrong)
 		@successAlert = true
 		@dangerAlert = true
+		@intermediateSuccessAlert = true
 
 	# When clicked on the correct code ...
 	correctCodeClick: ()->
 		console.log("correctCode!")
-		@successAlert = false
-		@dangerAlert = true
+		# When on the last question, display a finished course alert
+		if @currentPage is 10
+			@intermediateSuccessAlert = false
+			@dangerAlert = true
+		else
+			@successAlert = false
+			@dangerAlert = true
+			@intermediateSuccessAlert = true
 
 	# When clicked on the wrong code ...
 	wrongCodeClick: ()->
 		console.log("wrongCode!")
 		@dangerAlert = false
 		@successAlert = true
+		@intermediateSuccessAlert = true
 
 
 
