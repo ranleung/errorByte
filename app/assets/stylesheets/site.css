@@ -1,3 +1,8 @@
+body{
+	background: url(paper_fibers_@2X.png);
+	background-size: cover;
+}
+
 #navbarBackground{
 	background-color: #00bcd4;
 	background-size: cover;

@@ -12,7 +12,7 @@ class Router
 		@routeProvider.
 			when "/abouts",
 				templateUrl: "/about_templates",
-				controller: "AboutsCtrl as abouts"
+				# controller: "AboutsCtrl as abouts"
 
 		# Route for creating a new user
 		@routeProvider.

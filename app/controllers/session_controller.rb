@@ -4,7 +4,6 @@ class SessionController < ApplicationController
   respond_to :json, :html
 
   def new
-    # my login form
   end
 
   def create

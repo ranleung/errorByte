@@ -1,11 +1,12 @@
 <div class="container">
+	{{sessions}}
 
 	<div class="row">
 		<div class="wrap">
 			Hello Again
-			<form ng-submit="users.addUser(newUser)">
-				<input type="text" id="username" placeholder="Username" ng-model="newUser.username" autofocus required>
-				<input type="password" id="password" placeholder="Password" ng-model="newUser.password" required>
+			<form ng-submit="sessions.addSession(loginUser)">
+				<input type="text" id="username" placeholder="Username" ng-model="loginUser.username" autofocus required>
+				<input type="password" id="password" placeholder="Password" ng-model="loginUser.password" required>
 				<button class='createUser'>Log In</button>
 			</form>
 		</div>
