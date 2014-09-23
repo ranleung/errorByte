@@ -18,7 +18,8 @@ input{
   border-bottom:1px solid #ff5407;
   width:100%;
   height:36px;
-  font-size:26px;
+  font-size:26px !important;
+  text-align: center;
 }
 
 input:focus{

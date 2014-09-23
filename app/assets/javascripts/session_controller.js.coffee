@@ -4,8 +4,8 @@ class SessionsCtrl
 
 	constructor: (@scope, @http, @resource)->
 
-	addSession: (loginUser)->
-		console.log(loginUser)
+	# addSession: (loginUser)->
+	# 	console.log(loginUser)
 		
 
 

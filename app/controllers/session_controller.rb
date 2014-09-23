@@ -1,17 +1,26 @@
 class SessionController < ApplicationController
-	# before_action :render_main_layout_if_format_html
+  before_action :render_main_layout_if_format_html
 
-	# respond_to :json, :html
+  respond_to :json, :html
 
   def new
+    # my login form
   end
 
   def create
     @user = User.authenticate(params[:user][:username], params[:user][:password])
+  
+    if @user 
+      session[:user_id] = @user.id
+      respond_to do |format|
+        format.json {render :json => @user, :only => [:username, :password]}
+      end
+    end
   end
 
   def destroy
-  	respond_with session[:user_id] = nil
+  	session[:user_id] = nil
+    respond_with nil
   end
 
 	def render_main_layout_if_format_html

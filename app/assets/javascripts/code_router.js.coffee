@@ -33,10 +33,10 @@ class Router
 				controller: "IntermediatesCtrl as codes"
 
 		# Route for creating sessions
-		# @routeProvider.
-		# 	when "/login",
-		# 		templateUrl: "/session_templates",
-		# 		controller: "SessionsCtrl as sessions"
+		@routeProvider.
+			when "/login",
+				templateUrl: "/session_templates",
+				controller: "SessionsCtrl as sessions"
 
 
 		@locationProvider.html5Mode(true)
