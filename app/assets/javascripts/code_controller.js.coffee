@@ -25,6 +25,7 @@ class CodesCtrl
 		@totalItems = 100
 		@totalPages = 10
 		@progressBar = 10
+		@currentPage = 1
 
 	# Page Change for pagination
 	pageChanged: ()->

@@ -27,6 +27,7 @@ CodesCtrl = (function() {
     this.totalItems = 100;
     this.totalPages = 10;
     this.progressBar = 10;
+    this.currentPage = 1;
   }
 
   CodesCtrl.prototype.pageChanged = function() {
