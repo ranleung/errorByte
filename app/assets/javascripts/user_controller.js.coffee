@@ -11,10 +11,12 @@ class UsersCtrl
 		.success (data)=>
 			@user = data
 			console.log("USER:",@user)
+		# Getting all codes
 		@http.get("/codes.json")
 		.success (data)=>
 			@code = data
 			console.log("CODE:",@code)
+		# Getting from the join Table, all completed codes
 		@http.get("/completes.json")
 		.success (data)=>
 			@complete = data
