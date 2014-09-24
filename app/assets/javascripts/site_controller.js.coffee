@@ -5,6 +5,7 @@ class SitesCtrl
 
 	constructor: (@scope, @http, @resource)->
 		
+		
 
 
 
