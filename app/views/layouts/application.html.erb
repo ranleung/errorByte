@@ -34,19 +34,19 @@
 		      <li><a class="hd_navLink" href="/codes">Beginner.</a></li>
 		      <li><a class="hd_navLink"href="/intermediates">Intermediate.</a></li>
 		      <li><a class="hd_navLink"href="/abouts">About.</a></li>
-		      <% if session[:user_id] == nil %>
+		      
 			      <li><a class="hd_navLink"href="/login">Log In.</a></li>
 			      <li><a class="hd_navLink"href="/signup">Sign Up.</a></li>
-		      <% else %>
+		     
 			      <li><a class="hd_navLink"href="/users">Profile.</a></li>
 			      <li><a class="hd_navLink"href="/logout">Log Out.</a></li>
-		      <% end %>
+		      
 		    </ul>
 		  </div>
 		</nav>
 		</div>
 
-		<h2>WELCOME {{current_user}} </h2>
+		WELCOME {{current_user}}
 		<div ng-view>
 		</div>
 	</div>
