@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140919012220) do
   enable_extension "plpgsql"
 
   create_table "codes", force: true do |t|
+    t.string   "title"
     t.string   "level"
     t.text     "question"
     t.text     "correctCode"

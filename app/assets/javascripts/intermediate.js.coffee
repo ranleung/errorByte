@@ -15,6 +15,7 @@ class IntermediatesCtrl
 			console.log("DATA:",@data[10].level)
 
 			# HTML escaping in angular
+			@title = data[10].title
 			@question= data[10].question
 			@hint = data[10].hint
 			@level = data[10].level
@@ -39,6 +40,7 @@ class IntermediatesCtrl
 		@beginnerCounter = @currentPage - 1 + 10
 		@progressBar = @currentPage * 10
 		# console.log(@currentPage)
+		@title = @data[@beginnerCounter].title
 		@question = @data[@beginnerCounter].question
 		@level = @data[@beginnerCounter].level
 		@hint = @data[@beginnerCounter].hint

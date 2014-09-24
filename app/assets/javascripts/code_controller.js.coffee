@@ -15,7 +15,8 @@ class CodesCtrl
 			console.log("DATA:",@data[0].level)
 
 			# HTML escaping in angular
-			@question= data[0].question
+			@title = data[0].title
+			@question = data[0].question
 			@hint = data[0].hint
 			@level = data[0].level
 			@correctCode = @sce.trustAsHtml(@correct)
@@ -40,6 +41,7 @@ class CodesCtrl
 		@beginnerCounter = @currentPage - 1
 		@progressBar = @currentPage * 10
 		# console.log(@currentPage)
+		@title = @data[@beginnerCounter].title
 		@question = @data[@beginnerCounter].question
 		@level = @data[@beginnerCounter].level
 		@hint = @data[@beginnerCounter].hint
