@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140919012220) do
   end
 
   create_table "completes", force: true do |t|
-    t.boolean  "complete",   default: false
+    t.string   "complete",   default: "false"
     t.integer  "user_id"
     t.integer  "code_id"
     t.datetime "created_at"

@@ -21,6 +21,8 @@ class UsersCtrl
 		.success (data)=>
 			@complete = data
 			console.log("COMPLETE:",@complete)
+		@one = "hi"
+
 
 	addUser: (newUser)->
 		@User.save {user: newUser}, (data)->
