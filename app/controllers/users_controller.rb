@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		respond_with @user_params
+		respond_with set_user
 	end
 
 	def update

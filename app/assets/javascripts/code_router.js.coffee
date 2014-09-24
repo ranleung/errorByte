@@ -12,7 +12,7 @@ class Router
 		@routeProvider.
 			when "/abouts",
 				templateUrl: "/about_templates",
-				# controller: "AboutsCtrl as abouts"
+				controller: "AboutsCtrl as abouts"
 
 		# Route for creating a new user
 		@routeProvider.
@@ -37,6 +37,12 @@ class Router
 			when "/login",
 				templateUrl: "/session_templates",
 				controller: "SessionsCtrl as sessions"
+
+		# Route for User's Profile
+		@routeProvider.
+			when "/users/:id",
+				templateUrl: "/user_templates/show",
+				controller: "UsersCtrl as users"
 
 
 		@locationProvider.html5Mode(true)

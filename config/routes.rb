@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 	resources :about_templates
 	resources :intermediate_templates
 	resources :session_templates
-
+	
 	match '*path' => redirect('/'), via: :get
 
 end
