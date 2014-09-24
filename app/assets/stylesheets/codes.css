@@ -53,3 +53,35 @@
 .popover-content{
 	color:black !important;
 }
+
+/*Code*/
+.code {
+  background: -webkit-linear-gradient(#ccc,transparent 1px), #f5f5f5;
+  background-size: 100% 1.6em;
+  background-position: 0 3px;
+  font: .8em/1.6 monaco;
+  padding: 8px 15px;
+  position: relative;
+  border: solid thin #bbb;
+  border-left: solid 6px #00bcd4;
+  color: #555;
+  width: 100%;
+  counter-increment: ex-id;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.code:before {
+  content: "Javascript";
+  position: absolute;
+  right: 0; 
+  top: 0;
+  padding: 8px;
+  color: rgba(0, 0, 0, .3);
+}
+.code:hover {
+  background-color: #fafafa;
+}
+::selection {
+  background-color: #f93;
+  color: #fff;
+}
