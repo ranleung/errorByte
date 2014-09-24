@@ -14,7 +14,7 @@ class CodesController < ApplicationController
 	end
 
 	def show
-		respond_with @code_params
+		respond_with @code
 	end
 
 	def update

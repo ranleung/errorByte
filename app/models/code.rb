@@ -1,7 +1,5 @@
 class Code < ActiveRecord::Base
-	# has_many :completes
-	# has_many :users, :through => :completes
+	has_many :completes
+	has_many :users, :through => :completes
 
-
-	belongs_to :users
 end
