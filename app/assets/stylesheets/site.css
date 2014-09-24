@@ -13,7 +13,7 @@ body{
 .homebackground{
   height:auto;
   width: auto;
-	background: url("https://unsplash.imgix.net/45/QDSMoAMTYaZoXpcwBjsL__DSC0104-1.jpg?q=75&fm=jpg&auto=format&s=712c9b9c7ff4ea566d61e7f4bbe6cc53") no-repeat center center fixed;
+	background: url("home.jpg") no-repeat center center fixed;
   background-size: cover;
   position: fixed;
   right: 0;
