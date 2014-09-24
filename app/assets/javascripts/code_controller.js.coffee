@@ -73,7 +73,7 @@ class CodesCtrl
 		@successAlert = true
 		@beginnerSuccessAlert = true
 
-
+	
 
 
 

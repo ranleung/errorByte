@@ -87,11 +87,50 @@
 }
 
 /*Hint Button*/
+#hintButton{
+  text-decoration: none;
+  border: 2px solid black;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  color: black;
+  border-radius: 0px;   
+}
 
-
+#hintButton:hover{
+  background: #fff;
+  color: red;
+}
 
 
 /*Modal*/
 
+
+
+
+/*Question Number*/
+#totalQuestionNumber{
+  position: relative;
+  bottom:50px;
+  left: 50px;
+}
+
+#questionCircle{
+  border-radius: 50%;
+  border: 2px solid black;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+#questionNumber{
+  font-size: 15px;
+}
+
+#classLevel{
+  /*left: 50px;*/
+}
+
+/*Code Question*/
 
 
