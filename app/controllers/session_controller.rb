@@ -12,14 +12,22 @@ class SessionController < ApplicationController
     if @user 
       session[:user_id] = @user.id
       respond_to do |format|
-        format.json {render :json => @user, :only => [:username, :password]}
+        format.json {render :json => @user, :only => [:username]}
       end
+    else
+      render json: {}, status: 400
     end
   end
 
   def destroy
   	session[:user_id] = nil
     respond_with nil
+  end
+
+  def logged_in_user
+    if session[:user_id]
+      render json: User.find_by_id(session[:user_id]), only: [:username]
+    end
   end
 
 	def render_main_layout_if_format_html

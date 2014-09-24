@@ -19,7 +19,7 @@ class CompletesController < ApplicationController
 
 	private
 	def set_complete
-		@complete = Complete.find(params[:id])
+		@complete = Complete.find_by_user_id(params[:id])
 	end
 
 	def complete_params

@@ -44,6 +44,11 @@ class Router
 				templateUrl: "/user_templates/show",
 				controller: "UsersCtrl as users"
 
+		# Route for Log Out
+		@routeProvider.
+			when "/logout",
+				templateUrl: "/site_templates"
+
 
 		@locationProvider.html5Mode(true)
 

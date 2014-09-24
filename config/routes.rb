@@ -6,14 +6,15 @@ Rails.application.routes.draw do
 
 	# get '/abouts', to: 'about#index'
 	get '/login', to: 'session#new'
+	get '/logged_in_user', to: "session#logged_in_user"
   post '/login', to: 'session#create'
-  post 'session/destroy', to: 'session#destroy' 
+  delete '/logout', to: 'session#destroy' 
   
 	resources :users
 	resources :codes
 	resources :sites
 	resources :sessions
-	resources :abouts
+	resources :completes
 	resources :intermediates
 	resources :code_templates
 	resources :site_templates
@@ -23,5 +24,4 @@ Rails.application.routes.draw do
 	resources :session_templates
 	
 	match '*path' => redirect('/'), via: :get
-
 end
