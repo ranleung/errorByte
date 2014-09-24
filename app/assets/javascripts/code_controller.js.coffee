@@ -46,6 +46,17 @@ class CodesCtrl
 		else
 			@codeQuestionsSet2 = false
 
+		# Hiding all the code to show Modal
+		@codeContainer = true
+		@interCodesModal = true
+		@beginnerCodesModal = false
+
+	# Clicking "Ready", out of Modal, now loads all the codes
+	loadCodeModal: ()->
+		@codeContainer = false
+		@beginnerCodesModal = true
+
+
 	# Page Change for pagination
 	pageChanged: ()->
 		console.log("Page changed to: ", @currentPage)

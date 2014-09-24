@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-hide="codes.codeContainer">
 	<div class="row text-center">
 		
 		<!-- Displaying Alert When Right Answer-->
@@ -62,6 +62,7 @@
 
 	<div class="row text-center">
 		<h4>{{codes.title}}</h4>
+		<hr>
 		<h3>{{codes.question}}</h3>
 	</div>
 
@@ -113,28 +114,62 @@
 		<pagination total-items="codes.totalItems" ng-model="codes.currentPage" ng-change="codes.pageChanged()"></pagination>
 	</div>
 
-<div class="modal-dialog">
-	 <div class="modal-content">
-	  <div class="modal-header">
-	    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-	  </div>
-	  <div class="modal-body">
-	    ...
-	  </div>
-	  <div class="modal-footer">
-	    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	    <button type="button" class="btn btn-primary">Save changes</button>
-	  </div>
-	</div>
-</div>
-
-
-
-
 	<hr>
 	<div class="footer">
     <p>&copy; errorByte 2014</p>
   </div>
 
 </div> <!-- Container Close -->
+
+
+<div class="container" ng-hide="codes.beginnerCodesModal">  <!-- BEGINNER Modal Only Container -->
+
+	<div class="modal-dialog">
+		 <div class="modal-content">
+		  <div class="modal-header">
+		    <h4 class="modal-title text-center" id="myModalLabel">Welcome to the Beginner Track!</h4>
+		  </div>
+		  <div class="modal-body">
+		    <p>Directions:</p>
+		    <ul>
+		    	<li>Read the Question</li>
+		    	<li>Click on the Answer</li>
+		    	<li>Use the Hint if Needed</li>
+		    </ul>
+		    <br>
+		    <p class="text-center">Click "Next" when you are ready!</p>
+		  </div>
+		  <div class="modal-footer">
+		    <button type="button" class="btn btn-default" ng-click="codes.loadCodeModal()">Next</button>
+		  </div>
+		</div>
+	</div>
+
+</div>  <!-- Modal Only Container Close -->
+
+
+
+<div class="container" ng-hide="codes.interCodesModal">  <!-- INTERMEDIATE Modal Only Container -->
+
+	<div class="modal-dialog">
+		 <div class="modal-content">
+		  <div class="modal-header">
+		    <h4 class="modal-title text-center" id="myModalLabel">Welcome to the Intermediate Track!</h4>
+		  </div>
+		  <div class="modal-body">
+		    <p>Directions:</p>
+		    <ul>
+		    	<li>Read the Question</li>
+		    	<li>Click on the Answer</li>
+		    	<li>Use the Hint if Needed</li>
+		    </ul>
+		    <br>
+		    <p class="text-center">Click "Next" when you are ready!</p>
+		  </div>
+		  <div class="modal-footer">
+		    <button type="button" class="btn btn-default" ng-click="codes.loadCodeModal()">Next</button>
+		  </div>
+		</div>
+	</div>
+
+</div>  <!-- Modal Only Container Close -->
