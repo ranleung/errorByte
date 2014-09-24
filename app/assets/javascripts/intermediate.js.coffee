@@ -34,12 +34,24 @@ class IntermediatesCtrl
 		@beginnerSuccessAlert = true
 		@intermediateSuccessAlert = true
 
+		# Create Randomizer to randomize codeQuestionsSet to 1 or 2
+		# First hide both set of code questions
+		@codeQuestionsSet1 = true
+		@codeQuestionsSet2 = true
+		# Randomize
+		@randomNumber = Math.random()
+		if @randomNumber > 0.5
+			@codeQuestionsSet1 = false
+		else
+			@codeQuestionsSet2 = false
+
 	# Page Change for pagination
 	pageChanged: ()->
 		console.log("Page changed to: ", @currentPage)
 		@beginnerCounter = @currentPage - 1 + 10
 		@progressBar = @currentPage * 10
-		# console.log(@currentPage)
+
+		# Set the title, question, level, hint to the correct index, dependent on the page
 		@title = @data[@beginnerCounter].title
 		@question = @data[@beginnerCounter].question
 		@level = @data[@beginnerCounter].level
@@ -51,6 +63,15 @@ class IntermediatesCtrl
 		@successAlert = true
 		@dangerAlert = true
 		@intermediateSuccessAlert = true
+
+		# Same logic to randomize the number and show the correct code
+		@codeQuestionsSet1 = true
+		@codeQuestionsSet2 = true
+		@randomNumber = Math.random()
+		if @randomNumber > 0.5
+			@codeQuestionsSet1 = false
+		else
+			@codeQuestionsSet2 = false
 
 	# When clicked on the correct code ...
 	correctCodeClick: ()->

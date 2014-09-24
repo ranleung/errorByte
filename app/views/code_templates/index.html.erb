@@ -77,7 +77,8 @@
 		</div>
 	</div>
 	
-	<div class="row">
+	<!-- Code Questions -->
+	<div class="row" ng-hide="codes.codeQuestionsSet1">
 		<div class="col-md-6">
 			<pre id="correctCode" ng-click="codes.correctCodeClick()" class="code"><i ng-bind-html="codes.correctCode"></i></pre>
 		</div>
@@ -86,6 +87,19 @@
 			<pre id="wrongCode" ng-click="codes.wrongCodeClick()" class="code"><i ng-bind-html="codes.wrongCode"></i></pre>
 		</div>
 	</div> <!-- Row Close -->
+
+	<div class="row" ng-hide="codes.codeQuestionsSet2">
+		<div class="col-md-6">
+			<pre id="wrongCode" ng-click="codes.wrongCodeClick()" class="code"><i ng-bind-html="codes.wrongCode"></i></pre>
+		</div>
+
+		<div class="col-md-6">
+			<pre id="correctCode" ng-click="codes.correctCodeClick()" class="code"><i ng-bind-html="codes.correctCode"></i></pre>
+		</div>
+	</div> <!-- Row Close -->
+
+	RANDOM NUMBER: {{codes.randomNumber}}
+
 
 	<div class="row">
 		<div class="text-center">
@@ -99,7 +113,21 @@
 		<pagination total-items="codes.totalItems" ng-model="codes.currentPage" ng-change="codes.pageChanged()"></pagination>
 	</div>
 
-
+<div class="modal-dialog">
+	 <div class="modal-content">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	  </div>
+	  <div class="modal-body">
+	    ...
+	  </div>
+	  <div class="modal-footer">
+	    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	    <button type="button" class="btn btn-primary">Save changes</button>
+	  </div>
+	</div>
+</div>
 
 
 
