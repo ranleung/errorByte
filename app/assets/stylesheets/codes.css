@@ -104,7 +104,9 @@
 
 
 /*Modal*/
-
+#beginnerModalFooter{
+  float: left !important;
+}
 
 
 
@@ -131,6 +133,6 @@
   /*left: 50px;*/
 }
 
-/*Code Question*/
+
 
 
