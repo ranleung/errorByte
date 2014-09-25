@@ -1,6 +1,6 @@
 # errorByte
 
-Learn to Code by Learning Coding Errors in a trival format!
+Learn to Code by Learning Coding Errors in a trivia format!
 
 ## Overview
 
