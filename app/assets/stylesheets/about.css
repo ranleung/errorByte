@@ -1,0 +1,18 @@
+.errorPic{
+	height: 350px;
+	width: 350px;
+	border-radius: 20px;
+}
+
+#tech{
+	list-style: none;
+}
+
+.abouttitle{
+	text-decoration: underline;
+	font-size: 25px;
+}
+
+.aboutp{
+	font-size: 15px;
+}
