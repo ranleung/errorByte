@@ -25,13 +25,13 @@ I hope you will feel the same with these practice problems from errorByte.
 * PostgreSQL
 
 
-### Clone:
+#### Clone:
 
-* `bundle install` gems,
-* `rake db:create`,
-* `rake db:migrate`,
+* `bundle install`
+* `rake db:create`
+* `rake db:migrate`
 * `rake db:seed`
 
 
 
-> Check it out at: [errorByte](http://errorbyte.herokuapp.com/)
+### Check it out on heroku: [errorByte](http://errorbyte.herokuapp.com/)
