@@ -94,7 +94,8 @@
   text-align: center;
   font-weight: 600;
   color: black;
-  border-radius: 0px;   
+  border-radius: 0px;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.2);   
 }
 
 #hintButton:hover{
