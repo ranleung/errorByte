@@ -10,7 +10,7 @@ class UsersCtrl
 		@http.get("/users/#{@routeParams.id}.json")
 		.success (data)=>
 			@user = data
-			console.log("USER:",@user.codes)
+			console.log("USER:",@user)
 		# Getting all codes
 		@http.get("/codes.json")
 		.success (data)=>

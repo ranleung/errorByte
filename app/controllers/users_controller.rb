@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 	end
 
 	def user_params
-		params.require(:user).permit(:username, :password)
+		params.require(:user).permit(:username)
 	end
 
 	def render_main_layout_if_format_html

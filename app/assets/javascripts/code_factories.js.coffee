@@ -21,7 +21,7 @@ class User
 		@http.get("/users.json")
 
 	create: (newUser)->
-		@http.post("/users.json", {username: newUser.username, password: newUser.password})
+		@http.post("/users.json", {username: newUser.username})
 
 
 

@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-randall = User.create({username: "randall", password: "111"})
-ran = User.create({username: "ran", password: "111"})
+randall = User.create({username: "randall"})
+ran = User.create({username: "ran"})
 
 # From 1 - 10 are all Beginner Problems
 
