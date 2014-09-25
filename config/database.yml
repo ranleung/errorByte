@@ -80,6 +80,5 @@ test:
 #
 production:
   <<: *default
-  database: errorByte_production
-  username: errorByte
-  password: <%= ENV['ERRORBYTE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['HEROKU_POSTGRESQL_SILVER_URL'] %>
+
