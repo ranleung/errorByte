@@ -17,4 +17,5 @@
 //= require angular-resource/angular-resource.min
 //= require bootstrap.min
 //= require ui-bootstrap-tpls-0.11.0.min
+//= depend_on_asset "paper_fibers_@2X.png"
 // = require_tree .
