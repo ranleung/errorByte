@@ -8,8 +8,6 @@ class Code
 	all: ()->
 		@http.get("/codes.json")
 
-
-
 CodeFactories.service("Code", ["$http", Code])
 
 
@@ -22,7 +20,5 @@ class User
 
 	create: (newUser)->
 		@http.post("/users.json", {username: newUser.username})
-
-
 
 CodeFactories.service("User",["$http", User])
